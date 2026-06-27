@@ -80,8 +80,8 @@ export default function Experience() {
         gsap.set(progressLine, { height: '0%' });
 
         // Reset zipper clip paths to closed state (center seam at x=1 for left, x=0 for right)
-        gsap.set('#left-zipper-path', { attr: { d: 'M 0,0 L 1,0 L 1,1 L 0,1 Z' } });
-        gsap.set('#right-zipper-path', { attr: { d: 'M 0,0 L 1,0 L 1,1 L 0,1 Z' } });
+        gsap.set('#left-zipper-path', { attr: { d: 'M 0,0 L 1,0 L 1,0.5 L 1,1 L 0,1 Z' } });
+        gsap.set('#right-zipper-path', { attr: { d: 'M 0,0 L 1,0 L 1,1 L 0,1 L 0,0.5 Z' } });
 
         const tl = gsap.timeline({
           scrollTrigger: {
@@ -114,7 +114,7 @@ export default function Experience() {
           ease: 'none',
         }, 0)
         .to('#right-zipper-path', {
-          attr: { d: 'M 0,1 L 1,1 L 1,0 L 1,0 L 0,0.33 L 0,1 Z' },
+          attr: { d: 'M 1,0 L 1,0 L 1,1 L 0,1 L 0,0.33 Z' },
           duration: 0.33,
           ease: 'none',
         }, 0)
@@ -126,19 +126,19 @@ export default function Experience() {
           ease: 'none',
         }, 0.33)
         .to('#right-zipper-path', {
-          attr: { d: 'M 0,1 L 1,1 L 1,0 L 1,0 L 0,0.66 L 0,1 Z' },
+          attr: { d: 'M 1,0 L 1,0 L 1,1 L 0,1 L 0,0.66 Z' },
           duration: 0.33,
           ease: 'none',
         }, 0.33)
 
         // Step 3: Fully unzipped to 100%
         .to('#left-zipper-path', {
-          attr: { d: 'M 0,0 L 0,0 L 0,1 L 0,1 Z' },
+          attr: { d: 'M 0,0 L 0,0 L 0,1 L 0,1 L 0,1 Z' },
           duration: 0.34,
           ease: 'none',
         }, 0.66)
         .to('#right-zipper-path', {
-          attr: { d: 'M 1,0 L 1,0 L 1,1 L 1,1 Z' },
+          attr: { d: 'M 1,0 L 1,0 L 1,1 L 1,1 L 1,1 Z' },
           duration: 0.34,
           ease: 'none',
         }, 0.66)
@@ -440,13 +440,13 @@ export default function Experience() {
             <clipPath id="clip-left-zipper" clipPathUnits="objectBoundingBox">
               <path 
                 id="left-zipper-path" 
-                d="M 0,0 L 1,0 L 1,1 L 0,1 Z" 
+                d="M 0,0 L 1,0 L 1,0.5 L 1,1 L 0,1 Z" 
               />
             </clipPath>
             <clipPath id="clip-right-zipper" clipPathUnits="objectBoundingBox">
               <path 
                 id="right-zipper-path" 
-                d="M 0,0 L 1,0 L 1,1 L 0,1 Z" 
+                d="M 0,0 L 1,0 L 1,1 L 0,1 L 0,0.5 Z" 
               />
             </clipPath>
           </defs>
