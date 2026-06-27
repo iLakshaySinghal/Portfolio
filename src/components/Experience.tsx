@@ -355,13 +355,6 @@ export default function Experience() {
           ref={timelineContainerRef}
           className="absolute inset-0 max-w-[1100px] mx-auto w-full px-6 z-5 opacity-0 flex flex-col items-center justify-center pt-24"
         >
-          {/* Section Header */}
-          <div className="w-full text-center mb-10 flex flex-col items-center">
-            <span className="experience-sub-header text-xs font-display font-bold text-accent-primary/80 uppercase tracking-widest mb-1.5">
-              {"// HISTORY LOG"}
-            </span>
-          </div>
-
           <div className="relative w-full flex flex-col pl-6 md:pl-0 h-[65vh] overflow-y-visible">
             {/* Default background track line */}
             <div className="absolute left-[6px] md:left-1/2 top-0 bottom-0 w-[2px] bg-[#C5BBAA]/40 transform md:-translate-x-1/2 z-0" />
