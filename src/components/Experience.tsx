@@ -229,9 +229,6 @@ export default function Experience() {
       <div className="max-w-[1100px] mx-auto w-full px-4 py-24 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20 flex flex-col items-center">
-          <span className="text-xs font-display font-bold text-accent-primary uppercase tracking-widest mb-3">
-            {"// HISTORY LOG"}
-          </span>
           <h2 className="text-3xl md:text-5xl font-display font-black text-white tracking-tight uppercase">
             EXPERIENCE <span className="text-accent-primary text-glow-orange">TIMELINE</span>
           </h2>
